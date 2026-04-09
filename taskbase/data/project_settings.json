@@ -1,0 +1,48 @@
+{
+  "projectName": "CoreLab",
+  "version": "1.0.0",
+  "environment": "development",
+
+  "logging": {
+    "level": "debug",
+    "destinations": ["console", "file"],
+    "filePath": "./logs/corelab.log",
+    "rotation": {
+      "maxSizeMb": 10,
+      "maxFiles": 5,
+      "compress": true
+    }
+  },
+
+  "features": {
+    "enableDiagnostics": true,
+    "enableRealTimeAlerts": false,
+    "enableMetrics": true,
+    "enableCache": true
+  },
+
+  "alerts": {
+    "email": {
+      "enabled": false,
+      "recipients": []
+    },
+    "slack": {
+      "enabled": false,
+      "webhookUrl": ""
+    }
+  },
+
+  "api": {
+    "endpoint": "https://api.corelab.local",
+    "timeoutMs": 10000,
+    "retry": {
+      "maxAttempts": 3,
+      "backoffMs": 2000
+    }
+  },
+
+  "dataRetention": {
+    "enabled": true,
+    "days": 30
+  }
+}
