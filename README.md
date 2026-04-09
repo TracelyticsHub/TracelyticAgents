@@ -1,413 +1,180 @@
 <p align="center">
-  <img src="examples/logo.svg" alt="RunAnywhere Logo" width="140"/>
+  <img width="400" height="400" alt="tracelytics_ai_cover" src="https://github.com/user-attachments/assets/02314c23-648e-4532-a004-79c0b6cb2e83" />
 </p>
 
-<h1 align="center">RunAnywhere</h1>
-
-<p align="center">
-  <strong>On-device AI for every platform.</strong><br/>
-  Run LLMs, speech-to-text, and text-to-speech locally — private, offline, fast.
-</p>
-
-<p align="center">
-  <a href="https://apps.apple.com/us/app/runanywhere/id6756506307">
-    <img src="https://img.shields.io/badge/App_Store-Download-0D96F6?style=for-the-badge&logo=apple&logoColor=white" alt="Download on App Store" />
-  </a>
-  &nbsp;
-  <a href="https://play.google.com/store/apps/details?id=com.runanywhere.runanywhereai">
-    <img src="https://img.shields.io/badge/Google_Play-Download-34A853?style=for-the-badge&logo=google-play&logoColor=white" alt="Get it on Google Play" />
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://github.com/RunanywhereAI/runanywhere-sdks/stargazers"><img src="https://img.shields.io/github/stars/RunanywhereAI/runanywhere-sdks?style=flat-square" alt="GitHub Stars" /></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-blue?style=flat-square" alt="License" /></a>
-  <a href="https://discord.gg/N359FBbDVd"><img src="https://img.shields.io/badge/Discord-Join-5865F2?style=flat-square&logo=discord&logoColor=white" alt="Discord" /></a>
-</p>
-
-## See It In Action
+<h1 align="center">Tracelytics AI</h1>
 
 <div align="center">
-<table>
-  <tr>
-    <td align="center" width="50%">
-      <img src="docs/gifs/text-generation.gif" alt="Text Generation" width="240"/><br/><br/>
-      <strong>Text Generation</strong><br/>
-      <sub>LLM inference — 100% on-device</sub>
-    </td>
-    <td width="40"></td>
-    <td align="center" width="50%">
-      <img src="docs/gifs/voice-ai.gif" alt="Voice AI" width="240"/><br/><br/>
-      <strong>Voice AI</strong><br/>
-      <sub>STT → LLM → TTS pipeline — fully offline</sub>
-    </td>
-  </tr>
-  <tr><td colspan="3" height="30"></td></tr>
-  <tr>
-    <td align="center" width="50%">
-      <img src="docs/gifs/image-generation.gif" alt="Image Generation" width="240"/><br/><br/>
-      <strong>Image Generation</strong><br/>
-      <sub>On-device diffusion model</sub>
-    </td>
-    <td width="40"></td>
-    <td align="center" width="50%">
-      <img src="docs/gifs/visual-language-model.gif" alt="Visual Language Model" width="240"/><br/><br/>
-      <strong>Visual Language Model</strong><br/>
-      <sub>Vision + language understanding on-device</sub>
-    </td>
-  </tr>
-</table>
+  <p><strong>AI-powered trace analytics for product events, risk monitoring, and on-chain behavior</strong></p>
+  <p>
+    Event intelligence • Trace narratives • Risk scoring • Funnel visibility • AI copilots
+  </p>
 </div>
 
 ---
 
-## What is RunAnywhere?
+### 🚀 Quick Links
 
-RunAnywhere lets you add AI features to your app that run entirely on-device:
+[![Web App](https://img.shields.io/badge/Web%20App-Open-3b82f6?style=for-the-badge&logo=googlechrome&logoColor=white)](https://your-web-app-link.com)
 
-- **LLM Chat** — Llama, Mistral, Qwen, SmolLM, and more
-- **Speech-to-Text** — Whisper-powered transcription
-- **Text-to-Speech** — Neural voice synthesis
-- **Voice Assistant** — Full STT → LLM → TTS pipeline
+[![Telegram Mini App](https://img.shields.io/badge/Telegram%20Mini%20App-Launch-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/your_mini_app)
 
-No cloud. No latency. No data leaves the device.
+[![Docs](https://img.shields.io/badge/Docs-Read-8b5cf6?style=for-the-badge&logo=readthedocs&logoColor=white)](https://your-docs-link.com)
 
----
+[![X.com](https://img.shields.io/badge/X.com-Follow-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/your_account)
 
-## SDKs
+[![Telegram Community](https://img.shields.io/badge/Telegram%20Community-Join-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/your_group_or_channel)
 
-| Platform | Status | Installation | Documentation |
-|----------|--------|--------------|---------------|
-| **Swift** (iOS/macOS) | Stable | [Swift Package Manager](#swift-ios--macos) | [docs.runanywhere.ai/swift](https://docs.runanywhere.ai/swift/introduction) |
-| **Kotlin** (Android) | Stable | [Gradle](#kotlin-android) | [docs.runanywhere.ai/kotlin](https://docs.runanywhere.ai/kotlin/introduction) |
-| **Web** (Browser) | Beta | [npm](#web-browser) | [SDK README](sdk/runanywhere-web/) |
-| **React Native** | Beta | [npm](#react-native) | [docs.runanywhere.ai/react-native](https://docs.runanywhere.ai/react-native/introduction) |
-| **Flutter** | Beta | [pub.dev](#flutter) | [docs.runanywhere.ai/flutter](https://docs.runanywhere.ai/flutter/introduction) |
+> [!IMPORTANT]
+> Tracelytics AI turns fragmented product, system, and on-chain events into unified traces that show what actually happened across users, wallets, services, and flows
 
----
+## What’s Broken Today
 
-## Quick Start
+Most teams already collect logs, metrics, webhooks, and chain activity, but the signal is still buried under disconnected tools and rigid dashboards
 
-### Swift (iOS / macOS)
+Typical problems look like this
 
-```swift
-import RunAnywhere
-import LlamaCPPRuntime
+| Current workflow pain | What it causes |
+|---|---|
+| Product events live in one tool, infra alerts in another, on-chain activity somewhere else | No single narrative of what happened |
+| Static rules break when user behavior or flow logic changes | Too much noise or missed risk |
+| Funnel views show drop-off, but not the exact path behind it | Slow root-cause analysis |
+| Incident review depends on screenshots, logs, and manual reconstruction | Teams lose time during high-pressure moments |
 
-// 1. Initialize
-LlamaCPP.register()
-try RunAnywhere.initialize()
+> [!WARNING]
+> Raw telemetry alone does not explain why conversion dropped, why withdrawals suddenly spiked, or which sequence of actions created risk
 
-// 2. Load a model
-try await RunAnywhere.downloadModel("smollm2-360m")
-try await RunAnywhere.loadModel("smollm2-360m")
+## What Changes With This
 
-// 3. Generate
-let response = try await RunAnywhere.chat("What is the capital of France?")
-print(response) // "Paris is the capital of France."
+Tracelytics AI adds an intelligence layer on top of your existing telemetry stack
+
+Instead of treating events as isolated data points, it stitches them into traces, derives signals, and lets AI agents explain abnormal patterns in plain language
+
+```text
+Events → Signals → Traces → Cases → Actions
 ```
 
-**Install via Swift Package Manager:**
+This makes it possible to move from fragmented monitoring to an investigation-ready workflow where product, risk, and ops teams work from the same source of truth
 
-```
-https://github.com/RunanywhereAI/runanywhere-sdks
-```
+> [!TIP]
+> You connect sources once, then query funnels, incidents, anomalies, and high-risk journeys through one unified trace model
 
-[Full documentation →](https://docs.runanywhere.ai/swift/introduction) · [Source code](sdk/runanywhere-swift/)
+## Proof It Works
 
----
+The value shows up when teams stop asking for more dashboards and start asking sharper questions
 
-### Kotlin (Android)
+| Before | After with Tracelytics AI |
+|---|---|
+| “Conversion dropped somewhere” | “Step two degraded for one geo after a provider-side error spike” |
+| “These withdrawals look strange” | “Five linked wallets moved through the same high-risk withdrawal path in two hours” |
+| “We have alerts but no context” | “One grouped case with entities, signals, timeline, and next action” |
 
-```kotlin
-import com.runanywhere.sdk.public.RunAnywhere
-import com.runanywhere.sdk.public.extensions.*
+### Example scenario
 
-// 1. Initialize
-LlamaCPP.register()
-RunAnywhere.initialize(environment = SDKEnvironment.DEVELOPMENT)
+A team sees a sudden drop in deposit completion
 
-// 2. Load a model
-RunAnywhere.downloadModel("smollm2-360m").collect { println("${it.progress * 100}%") }
-RunAnywhere.loadLLMModel("smollm2-360m")
+Instead of checking product analytics, backend logs, payment callbacks, and wallet activity one by one, Tracelytics AI rebuilds the full story from trace data and highlights the exact service, cohort, and path where the degradation started
 
-// 3. Generate
-val response = RunAnywhere.chat("What is the capital of France?")
-println(response) // "Paris is the capital of France."
-```
+> [!NOTE]
+> The result is not just another alert but a readable explanation with impact, sequence, and recommended next step
 
-**Install via Gradle:**
+## Try the Core Flow
 
-```kotlin
-dependencies {
-    implementation("com.runanywhere.sdk:runanywhere-kotlin:0.16.1")
-    implementation("com.runanywhere.sdk:runanywhere-core-llamacpp:0.16.1")
-}
-```
+The fastest path to a useful first result is simple
 
-[Full documentation →](https://docs.runanywhere.ai/kotlin/introduction) · [Source code](sdk/runanywhere-kotlin/)
+| Step | Action | Outcome |
+|---|---|---|
+| 1 | Send structured events through SDK, webhook, or integration | Product and system activity enters a unified envelope |
+| 2 | Attach user, wallet, session, or flow identifiers | Events become traceable across systems |
+| 3 | Open the web app and query a funnel, anomaly, or trace search | First end-to-end narrative appears |
+| 4 | Let AI summarize the case | Teams get human-readable context instead of raw logs |
 
----
+> [!IMPORTANT]
+> A strong first setup usually starts with one critical flow such as signup, deposit, swap, or withdrawal
 
-### React Native
+## Real Scenarios
 
-```typescript
-import { RunAnywhere, SDKEnvironment } from '@runanywhere/core';
-import { LlamaCPP } from '@runanywhere/llamacpp';
+### 1) Fraud and risk monitoring
 
-// 1. Initialize
-await RunAnywhere.initialize({ environment: SDKEnvironment.Development });
-LlamaCPP.register();
+A newly created account moves through a rapid deposit and withdrawal pattern across several linked wallets  
+Tracelytics AI groups the activity into one risk case, scores it, and shows the exact path, entities, and signals behind the alert
 
-// 2. Load a model
-await RunAnywhere.downloadModel('smollm2-360m');
-await RunAnywhere.loadModel('smollm2-360m');
+### 2) Funnel and UX breakdowns
 
-// 3. Generate
-const response = await RunAnywhere.chat('What is the capital of France?');
-console.log(response); // "Paris is the capital of France."
-```
+A healthy onboarding funnel suddenly weakens after a release  
+The platform identifies the step, the affected cohort, and the service or event chain behind the regression instead of only showing aggregate drop-off
 
-**Install via npm:**
+### 3) Incident replay and investigation
 
-```bash
-npm install @runanywhere/core @runanywhere/llamacpp
-```
+An unexplained spike in errors appears during a key product flow  
+Teams can replay the trace timeline, inspect connected services and users, and move from symptom to root cause much faster
 
-[Full documentation →](https://docs.runanywhere.ai/react-native/introduction) · [Source code](sdk/runanywhere-react-native/)
+## Mechanics in Brief
 
----
+Under the hood, Tracelytics AI follows a structured pipeline
 
-### Flutter
+```text
+Ingestion
+  SDKs • Webhooks • Native integrations
 
-```dart
-import 'package:runanywhere/runanywhere.dart';
-import 'package:runanywhere_llamacpp/runanywhere_llamacpp.dart';
+Normalization
+  Unified event envelope • Field mapping • Taxonomy alignment • On-chain enrichment
 
-// 1. Initialize
-await RunAnywhere.initialize();
-await LlamaCpp.register();
+Intelligence layer
+  Anomaly detection • Risk scoring • Behavior analysis • Funnel and path analysis
 
-// 2. Load a model
-await RunAnywhere.downloadModel('smollm2-360m');
-await RunAnywhere.loadModel('smollm2-360m');
-
-// 3. Generate
-final response = await RunAnywhere.chat('What is the capital of France?');
-print(response); // "Paris is the capital of France."
+Delivery
+  Dashboards • Trace explorer • Case inbox • API queries • Outbound webhooks
 ```
 
-**Install via pub.dev:**
+### Core building blocks
 
-```yaml
-dependencies:
-  runanywhere: ^0.16.0
-  runanywhere_llamacpp: ^0.16.0  # LLM text generation
-  # runanywhere_onnx: ^0.16.0   # Add this if you need STT, TTS, or Voice features
-```
+| Layer | What it does |
+|---|---|
+| Events | Captures actions like signup, withdrawal, swap, failure, KYC step |
+| Signals | Adds interpreted meaning like anomaly, severity, risk tag, UX issue |
+| Traces | Connects events and signals into a coherent story |
+| Cases | Groups meaningful alerts into investigation-ready incidents |
 
-[Full documentation →](https://docs.runanywhere.ai/flutter/introduction) · [Source code](sdk/runanywhere-flutter/)
+> [!CAUTION]
+> The system becomes far less useful when events arrive without stable IDs, timestamps, or flow context
 
----
+## Compared to Alternatives
 
-### Web (Browser)
+Tracelytics AI is not trying to replace every analytics or observability tool you already use  
+It changes how fragmented data becomes operational context
 
-```typescript
-import { RunAnywhere, TextGeneration } from '@runanywhere/web';
+| Approach | Limitation | Tracelytics AI difference |
+|---|---|---|
+| Traditional dashboards | Strong charts, weak narrative | Explains paths, cases, and trace-level context |
+| Manual log investigation | Accurate but slow | Builds end-to-end stories automatically |
+| Static alerting rules | Brittle and noisy | Combines rules, baselines, and AI pattern analysis |
+| Pure on-chain trackers | Chain-focused only | Links on-chain actions with product and service behavior |
 
-// 1. Initialize
-await RunAnywhere.initialize({ environment: 'development' });
+## Failure Cases
 
-// 2. Load a model
-await TextGeneration.loadModel('/models/qwen2.5-0.5b-instruct-q4_0.gguf', 'qwen2.5-0.5b');
+Tracelytics AI is powerful, but it is not universal
 
-// 3. Generate
-const result = await TextGeneration.generate('What is the capital of France?');
-console.log(result.text); // "Paris is the capital of France."
-```
+It will not help much if the underlying data is incomplete, inconsistent, or missing key identifiers  
+It is also not a replacement for legal judgment, compliance review, or guaranteed fraud prevention
 
-**Install via npm:**
+Use caution in these situations
 
-```bash
-npm install @runanywhere/web
-```
+| When not to rely on it alone | Why |
+|---|---|
+| Incomplete or delayed event ingestion | The trace story may be partial or misleading |
+| Missing user, wallet, or flow identity fields | Cross-system stitching becomes weak |
+| Fully manual offline processes | There may be little machine-readable data to analyze |
+| Final legal or financial decisions | AI outputs are advisory, not authoritative |
 
-[Full documentation →](sdk/runanywhere-web/) · [Source code](sdk/runanywhere-web/)
-
----
-
-## Sample Apps
-
-Full-featured demo applications demonstrating SDK capabilities:
-
-| Platform | Source Code | Download |
-|----------|-------------|----------|
-| iOS | [examples/ios/RunAnywhereAI](examples/ios/RunAnywhereAI/) | [App Store](https://apps.apple.com/us/app/runanywhere/id6756506307) |
-| Android | [examples/android/RunAnywhereAI](examples/android/RunAnywhereAI/) | [Google Play](https://play.google.com/store/apps/details?id=com.runanywhere.runanywhereai) |
-| Web | [examples/web/RunAnywhereAI](examples/web/RunAnywhereAI/) | Build from source |
-| React Native | [examples/react-native/RunAnywhereAI](examples/react-native/RunAnywhereAI/) | Build from source |
-| Flutter | [examples/flutter/RunAnywhereAI](examples/flutter/RunAnywhereAI/) | Build from source |
+> [!WARNING]
+> Tracelytics AI is an analytics and risk-support platform, not financial, legal, or compliance advice
 
 ---
 
-## Starter Examples
+## Why teams use it
 
-Minimal starter projects to get up and running with RunAnywhere on each platform:
+Tracelytics AI helps teams move from isolated telemetry to explainable operational intelligence
 
-| Platform | Repository |
-|----------|------------|
-| Kotlin (Android) | [RunanywhereAI/kotlin-starter-example](https://github.com/RunanywhereAI/kotlin-starter-example) |
-| Swift (iOS) | [RunanywhereAI/swift-starter-example](https://github.com/RunanywhereAI/swift-starter-example) |
-| Flutter | [RunanywhereAI/flutter-starter-example](https://github.com/RunanywhereAI/flutter-starter-example) |
-| React Native | [RunanywhereAI/react-native-starter-app](https://github.com/RunanywhereAI/react-native-starter-app) |
-
----
-
-## Playground
-
-Real-world projects built with RunAnywhere that push the boundaries of on-device AI. Each one ships as a standalone app you can build and run.
-
-### [Android Use Agent](Playground/android-use-agent/)
-
-A fully on-device autonomous Android agent that controls your phone. Give it a goal like "Open YouTube and search for lofi music" and it reads the screen via the Accessibility API, reasons about the next action with an on-device LLM (Qwen3-4B), and executes taps, swipes, and text input -- all without any cloud calls. Includes a Samsung foreground boost that delivers a 15x inference speedup, smart pre-launch via Android intents, and loop detection with automatic recovery. Benchmarked across four LLM models on a Galaxy S24. **[Full benchmarks](Playground/android-use-agent/ASSESSMENT.md)**
-
-### [On-Device Browser Agent](Playground/on-device-browser-agent/)
-
-A Chrome extension that automates browser tasks entirely on-device using WebLLM and WebGPU. Uses a two-agent architecture -- a Planner that breaks down goals into steps and a Navigator that interacts with page elements -- with both DOM-based and vision-based page understanding. Includes site-specific workflows for Amazon, YouTube, and more. All AI inference runs locally on your GPU after the initial model download.
-
-### [Swift Starter App](Playground/swift-starter-app/)
-
-A full-featured iOS app demonstrating the RunAnywhere SDK's core AI capabilities in a clean SwiftUI interface. Includes LLM chat with on-device language models, Whisper-powered speech-to-text, neural text-to-speech, and a complete voice pipeline that chains STT, LLM, and TTS together with voice activity detection. A good starting point for building privacy-first AI features on iOS.
-
-### [Linux Voice Assistant](Playground/linux-voice-assistant/)
-
-A complete on-device voice AI pipeline for Linux (Raspberry Pi 5, x86_64, ARM64). Say "Hey Jarvis" to activate, speak naturally, and get responses -- all running locally with zero cloud dependency. Chains Wake Word detection (openWakeWord), Voice Activity Detection (Silero VAD), Speech-to-Text (Whisper Tiny EN), LLM reasoning (Qwen2.5 0.5B Q4), and Text-to-Speech (Piper neural TTS) in a single C++ binary.
-
-### [OpenClaw Hybrid Assistant](Playground/openclaw-hybrid-assistant/)
-
-A hybrid voice assistant that keeps latency-sensitive components on-device (wake word, VAD, STT, TTS) while routing reasoning to a cloud LLM via OpenClaw WebSocket. Supports barge-in (interrupt TTS by saying the wake word), waiting chimes for cloud response feedback, and noise-robust VAD with burst filtering. Built for scenarios where on-device LLMs are too slow but you still want private audio processing.
-
----
-
-## Features
-
-| Feature | iOS | Android | Web | React Native | Flutter |
-|---------|-----|---------|-----|--------------|---------|
-| LLM Text Generation | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Streaming | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Speech-to-Text | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Text-to-Speech | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Voice Assistant Pipeline | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Vision Language Models | ✅ | — | ✅ | — | — |
-| Model Download + Progress | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Structured Output (JSON) | ✅ | ✅ | ✅ | 🔜 | 🔜 |
-| Tool Calling | ✅ | ✅ | ✅ | — | — |
-| Embeddings | — | — | ✅ | — | — |
-| Apple Foundation Models | ✅ | — | — | — | — |
-
----
-
-## Supported Models
-
-### LLM (GGUF format via llama.cpp)
-
-| Model | Size | RAM Required | Use Case |
-|-------|------|--------------|----------|
-| SmolLM2 360M | ~400MB | 500MB | Fast, lightweight |
-| Qwen 2.5 0.5B | ~500MB | 600MB | Multilingual |
-| Llama 3.2 1B | ~1GB | 1.2GB | Balanced |
-| Mistral 7B Q4 | ~4GB | 5GB | High quality |
-
-### Speech-to-Text (Whisper via ONNX)
-
-| Model | Size | Languages |
-|-------|------|-----------|
-| Whisper Tiny | ~75MB | English |
-| Whisper Base | ~150MB | Multilingual |
-
-### Text-to-Speech (Piper via ONNX)
-
-| Voice | Size | Language |
-|-------|------|----------|
-| Piper US English | ~65MB | English (US) |
-| Piper British English | ~65MB | English (UK) |
-
----
-
-## Repository Structure
-
-```
-runanywhere-sdks/
-├── sdk/
-│   ├── runanywhere-swift/          # iOS/macOS SDK
-│   ├── runanywhere-kotlin/         # Android SDK
-│   ├── runanywhere-web/            # Web SDK (WebAssembly)
-│   ├── runanywhere-react-native/   # React Native SDK
-│   ├── runanywhere-flutter/        # Flutter SDK
-│   └── runanywhere-commons/        # Shared C++ core
-│
-├── examples/
-│   ├── ios/RunAnywhereAI/          # iOS sample app
-│   ├── android/RunAnywhereAI/      # Android sample app
-│   ├── web/RunAnywhereAI/          # Web sample app
-│   ├── react-native/RunAnywhereAI/ # React Native sample app
-│   └── flutter/RunAnywhereAI/      # Flutter sample app
-│
-├── Playground/
-│   ├── swift-starter-app/          # iOS AI playground app
-│   ├── on-device-browser-agent/    # Chrome browser automation agent
-│   ├── android-use-agent/          # On-device autonomous Android agent
-│   ├── linux-voice-assistant/      # Linux on-device voice assistant
-│   └── openclaw-hybrid-assistant/  # Hybrid voice assistant (on-device + cloud)
-│
-└── docs/                           # Documentation
-```
-
----
-
-## Requirements
-
-| Platform | Minimum | Recommended |
-|----------|---------|-------------|
-| iOS | 17.0+ | 17.0+ |
-| macOS | 14.0+ | 14.0+ |
-| Android | API 24 (7.0) | API 28+ |
-| Web | Chrome 96+ / Edge 96+ | Chrome 120+ |
-| React Native | 0.74+ | 0.76+ |
-| Flutter | 3.10+ | 3.24+ |
-
-**Memory:** 2GB minimum, 4GB+ recommended for larger models
-
----
-
-## Contributing
-
-We welcome contributions. See our [Contributing Guide](CONTRIBUTING.md) for details.
-
-```bash
-# Clone the repo
-git clone https://github.com/RunanywhereAI/runanywhere-sdks.git
-
-# Set up a specific SDK (example: Swift)
-cd runanywhere-sdks/sdk/runanywhere-swift
-./scripts/build-swift.sh --setup
-
-# Run the sample app
-cd ../../examples/ios/RunAnywhereAI
-open RunAnywhereAI.xcodeproj
-```
-
----
-
-## Support
-
-- **Discord:** [Join our community](https://discord.gg/N359FBbDVd)
-- **GitHub Issues:** [Report bugs or request features](https://github.com/RunanywhereAI/runanywhere-sdks/issues)
-- **Email:** founders@runanywhere.ai
-- **Twitter:** [@RunanywhereAI](https://twitter.com/RunanywhereAI)
-
----
-
-## License
-
-Apache 2.0 — see [LICENSE](LICENSE) for details.
+It is built for products that need more than charts  
+They need traceability, anomaly context, behavior patterns, and faster decisions across product, risk, and on-chain workflows
